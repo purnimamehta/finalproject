@@ -1,0 +1,335 @@
+CSC108: Final Project
+
+Due:	June 17, 2016, 10:00 PM
+Late penalty:	No late assignments will be accepted.
+Hand in:	Electronic submit through MarkUs. PLEASE SUBMIT adventure.zip.
+Marking:
+
+All code must be your own!!! Do not discuss the questions with
+people other than your TA or instructor. If someone asks you to teach them
+the basics, this is fine.
+
+No copy and modify code allowed from other sources.
+See marking scheme
+Groups:	Work with a partner
+Environment:	Please make sure your code works in our DH computer labs.
+The end result of the project is a text adventure game.
+
+The goal of the project is to give you the opportunity to synthesize much of what
+you have learned this semester by working on a larger programming task.
+
+You will be given the ability to make many of your own specification and design decisions.
+
+In fact, the project is structured in two parts:
+
+85% of your mark is for completing a basic set of requirements (referred to as the baseline requirements in this handout)
+15% is for adding further enhancements of your choosing.
+Working with a Partner
+
+It is highly recommended that you work with a partner for this project. You may work alone or in groups of two. Pair programming and the ability to get assistance from a partner are significant advantages and will help you better understand the material. You may only discuss your assignment with this partner (if you have one) or the course staff (TAs, instructors).
+
+Please make sure to form a group on MarkUs. You must form a group and submit only one copy of your submission.
+To form a group, one of you must invite the other to join. Then, the other student who is invited must accept the invitation.
+
+To work by yourself, choose the option to Work Alone on MarkUs.
+
+You have until June 10, midnight, to declare your partnership.
+
+The Story
+
+For this project, you are to write a small-scale adventure game that takes place
+at your campus at the University of Toronto. The plot is as follows.
+
+You've got an important exam coming up this evening, and you've been studying for weeks.
+Last night was a particularly late night on campus. You had difficulty focusing,
+so rather than staying in one place, you studied in various places throughout the building
+as the night progressed. Unfortunately, when you woke up this morning, you were missing some
+important exam-related items. You cannot find your T-card, and you're pretty sure that you're
+not going to get into tonight's exam without it. Also, you seem to have misplaced your lucky
+exam pen -- even if they let you in, you can't possibly write with another pen!
+Finally, your instructor for the course is nicer than your CSC108 instructors in that
+they are allowing you one handwritten page of information in the exam. Last night,
+you painstakingly crammed as much material onto a single page as humanly possible,
+but that's missing, too! All of this stuff must be around the building somewhere!
+Can you find all of it before your exam starts tonight?
+If you haven't played a text adventure game before, it's worth messing around with
+one to get a feel for how it works. You can play one called Adventure online here.
+
+Objective
+
+Your adventure game will allow players to try to find all of the required items prior to the exam starting.
+If the player finds all of the items and brings them to the exam room before the exam starts, they "win" the game. (See "Winning the game" below for more details)
+
+Getting Started
+
+Download the available starter code here: adventure.zip
+Unzip this file. You will now have a directory named "adventure" that has all necessary starter code in it.
+Baseline Requirements
+
+At a minimum, you are required to implement the following functionality:
+
+DOCSTRINGS
+You must write docstrings for all of your functions. You are welcome and encouraged to write as many helper functions as you like in order to eliminate duplicate code and make your program easier to read.
+Adhere to the Python Style Guidelines when writing these docstrings and formatting your code.
+
+LOCATION DESCRIPTIONS
+Each location in the game has an associated description. Keep in mind that a location does not necessarily have to be a "room" -- it could be a courtyard, a portion of a street surrounding the building, etc.
+Print either a full or brief description upon each visit.
+Each time a player enters a location, they must be given a description of the location (a longer description if this is the first time the player is visiting it, a brief description otherwise). Text adventures generally display the full description of a room only once, when the room is entered the first time. Subsequent visits to the room yield only a brief description that alerts the gamer to where they are, without repeating scenery and other descriptive information.
+
+Each location must have a number associated with it.
+Both the full and the brief description MUST contain the location number associated with that location as a header, e.g.:
+LOCATION 0
+You are on the first floor of the UTM Library. There is an empty study room to the South, an exit from the library to the North.
+
+If printing out the location number spoils your game somehow (depends on the plot and puzzles in your game), you may choose instead to print out a unique name for the location instead, like so:
+
+LOCATION: UTM LIBRARY
+You are on the first floor of the UTM Library. There is an empty study room to the South, an exit from the library to the North.
+The above would be examples of a brief description of a location.
+
+Required Command: "Look"
+The "look" command prints out the full description of the current location.
+
+Each location must be stored as an instance of the Location class provided in the starter code.
+ITEMS
+Some of the locations have items within them. These items can be taken by the gamer and carried to another location, where they can then be deposited.
+Required Command: "Inventory"
+This command gives a list of what the gamer is currently carrying.
+
+Each item must be stored as an instance of the Item class provided in the starter code.
+MOVEMENT
+Your Player must be able to move through the game world.
+Adventure games generally consist of an explorer moving from location to location through a set of interconnecting corridors. From the current location, the gamer can access other reachable locations by traveling in a designated direction: north, south, east, west. Normally, corridors can be traversed in both directions; for example, if you travel east from a foyer to reach a hallway, you can generally travel west from that hallway to go back to the foyer. However, this is not always the case, especially when adventure games involve "confusing", "twisty" or "dark" passages.
+Required Commands: "Go [direction]" where [direction] is "north", "south", "east", "west"
+
+Load data from "map.txt" file (see starter code), and use this to determine which directional commands are available at each location.
+READING FROM FILES INTO CLASSES
+You are required to implement the game by writing an "adventure engine" that uses data files to obtain location and item information. In other words, information about the actual locations and items in your particular game should not be hard-coded, but should instead live in data files that are read by your program. (The benefit of this approach is that you can change your data files to create a new "game world", without touching your source code.)
+
+There should be three files in total storing: (1) the entire world map, (2) location data, (3) item data.
+
+Your starter code zip includes these text files:
+
+map.txt
+locations.txt
+items.txt
+The sample data in these text files can be removed or incorporated into your game.
+MAP FILE
+The map must be called "map.txt" and stored in the following format:
+Each location is associated with a number
+The numbers are arranged in a grid, showing their position, each number separated by a space
+The (x, y) position of these locations will be used in your code, to determine movement from one location to another
+The number "-1" is used to represent non-existent areas
+e.g. If the entire plot of our game takes place in an L-shaped building, we can store this in map.txt like so:
+1 -1 -1
+2 -1 -1
+3 4 5
+Here, the only accessible locations are 1, 2, 3, 4, 5. The "-1" are empty areas.
+So, from location 1, the player is allowed to travel only south. From location 3, the player is allowed to travel either north or east. And so on.
+This map must be stored in self.map in the World class as detailed in the starter code.
+
+A note about (x,y) positions: The x-y coordinate plane here is represented with (0,0) as the top left corner. From there, x increases to the right, and y increases to the bottom. So, for the map above, location 4 is considered to be at position (1,2).
+
+LOCATIONS AND ITEMS FILES
+The format of the location and item data files is up to you and partially depends on the additional enhancements that you decide to implement.
+As an example for item data, we might store items in "items.txt" using a one line per item format, such as:
+
+1 10 5 Cheat Sheet
+In this example, there are four fields: three integers followed by a string. The first field is where the item is initially located; please note that it is possible to have more than one item present at the same location. The second field is the number of the location where the item is to be deposited for credit. The third field is the number of points received for depositing the item in that credit location. The last field contains the name of the item.
+
+As an example for location data, we might store locations in "locations.txt" as follows:
+
+Line 1: data containing location number. Locations are sequentially numbered beginning at zero.
+Line 2: number of points received for visiting this location (an optional attribute you may choose to add if it works with your game; this is not included in given starter code).
+Line 3: one line (i.e. brief) description of where you are. Brief descriptions are often used when revisiting a location.
+Line 4: start of (long) descriptive text for the location. Multiple lines are permitted. The word END at the beginning of a line is used to indicate the end of the descriptive text.
+For example, a location description (for the UTM Library) might look as follows.
+LOCATION 0
+5
+You are on the first floor of the UTM Library. There is an empty study room to the South, an exit from the library to the North.
+You are on the first floor of the UTM Library. It's usually crowded at this time of the day, but today it's eerily quiet. Only a few students are studying inside one of the study rooms. You better not disturb them. A librarian stands near the service desk, looking bored and sleepy. There is an empty study room to the South, an exit from the library to the North.
+END
+
+WINNING THE GAME / LIMITED NUMBER OF MOVES
+As mentioned, the gamer wins the game if they are able to bring all exam-related items to the exam room before the exam starts. In your game, you should settle on the number of moves that the gamer is allowed to make prior to the exam starting. If they exhaust their allotted number of moves, then the exam starts and the gamer does not win.
+You are not required to physically time the gamer. They can take as long as they like to play the game. What matters is the number of moves they make, not the actual wallclock time that elapses while they play. (Is look or inventory a "move"? That's for you to decide!)
+
+SCORE
+The game should keep track of the user's score. The scoring algorithm should include giving points for picking up and depositing the required exam items, as well as performing other applicable actions in the game as you see fit.
+Required Command: "Score"
+This command gives the gamer's current score. The scoring algorithm should include giving points for picking up and depositing the required exam items, as well as performing other applicable actions in the game as you see fit.
+QUIT
+Another required command is "Quit", allowing the player to quit the game at any time.
+Minimum Requirements Checklist
+
+As a summary of the above, here is a checklist of minimum requirements:
+World and player data is stored within a single instance of the World class and Player class
+World map is read from "map.txt", and stored as a nested list in World.map, as the starter code describes
+All location and item data is read from external files "locations.txt" and "items.txt", and stored as instances of the Location and Item classes
+Minimum required items: T-card, Cheat Sheet, Lucky Pen
+Commands (these must be the exact strings used for the commands - not case-sensitive):
+Go [direction] - north, south, east, west
+Players are able to move in appropriate directions, based on map.
+Look
+Each location has a description.
+Full description is given when "look" command used, or when first visiting a location.
+Else, brief description is given.
+Inventory
+Players can pick up and drop items.
+Inventory command displays all items currently in inventory.
+Make sure only items in inventory can be used or dropped, and only items in the current location can be picked up.
+Score
+Players must have a score which can be seen using "score" command.
+Quit
+Quit command allows player to quit game at any time.
+Player's total number of moves is limited
+Player can win the game
+Player loses the game if max. number of moves reached
+Required text files are complete (see What to Submit below for details)
+Enhancements: Adding Puzzles and Features
+
+To include enhancements in your project (worth 15% of the final grade), your game must have at least one fully implemented puzzle.
+The functionality we have described so far -- moving around, taking and dropping items -- is one important facet of traditional adventure games. The other is the presence of puzzles that must be solved. Without puzzles, the game can be won simply by running around and picking up everything.
+
+For a good description of the reasoning behind puzzles, and common types of puzzles, see this page all about puzzles. Some puzzles are rather elaborate, relying on performing specialized verbs on multiple items or imposing specific timing requirements. Your puzzles can be simple -- finding a key in a remote location from the door that it opens -- or more complex. Regardless, implementing puzzles will require that you extend the commands you support and/or extend the information you store in your data files.
+
+If you wish to further increase the complexity of your game, in addition to this puzzle, you could implement any additional features you like (just keep it G-rated :P).
+
+Here are a few suggestions:
+Even more puzzles!
+Allow the gamer to save their game to a file and restore it later. That way, they don't have to complete the game in a single sitting.
+Add more verbs (actions) that the gamer can perform. For example, you might provide a "read" command that gives an appropriate admonishment when used on unreadable items, but gives clues if used on a book or a piece of paper. How about an "examine" command that lets you take a closer look at a given item? An "open" or "unlock" command for drawers, cabinets, and doors? (Most of this will require adding additional fields to your data files!)
+Give items a weight, and limit the total weight of items that the gamer can carry. (And why not add a puzzle that requires several items to be present at the same location, but which cannot be carried at the same time because they weigh too much?)
+Please don't ask how many marks your enhancements will earn: we can't evaluate your code before the due date!
+IMPORTANT: To receive credit for your enhancements, you must submit a written description that explains how your enhancements went beyond the baseline requirements. Submit your description in a plain text file named enhancements.txt. Each puzzle should be described in one short paragraph. The descriptions of any additional features other than the puzzles should not exceed 200 words.
+
+If you did not add enhancements, do NOT submit enhancements.txt; you will still be able to earn up to 85%.
+
+Suggested Milestones
+
+To help you break the project down and keep on track, here is a series of suggested milestones.
+
+Settle the specification and plan your enhancements.
+The specifications provided tell you what operations your program must provide, but not all the details of how it should behave under every circumstance. Go through all of the operations and make those decisions. For example, how does the gamer indicate that they are ready to "write the exam"? (This could occur automatically once all of the items are in the proper place, for example.) Next, plan what your puzzle(s)/enhancement(s) will be. If you have ambitious plans, you would be wise to have some simpler enhancements in mind, just in case you get behind. Finally, you should work with your partner to create a schedule for milestone completion. Write it down and refer back to it often.
+Begin coding with a "datafile parser".
+Get started on the load... methods in the World class. Having your code read the map, items and location data from the data files, and creating the required items in memory, is a good first step.
+Implement the movement commands.
+Implement the directional commands (north, south, etc.) so that the gamer can travel between locations. Descriptions of locations should be displayed, including any items present there, but item manipulation itself will be left to the next milestone. Here, ensure that the gamer cannot travel in a direction that is not prescribed by your world map. For example, if a location has no exit to the north, trying to go north should yield a suitable "there's no exit in that direction" message or something similar.
+Add item manipulation. This involves allowing the gamer to get and drop items. Keep an inventory of what the gamer is currently carrying, and allow them to inspect this inventory. Be sure that the gamer cannot pick up an item that is not in the current location, or drop an item that is not in their inventory.
+Note: you should be able to complete the above milestones using the provided World, Player, Location and Item classes. For the next milestone, you may have to add to or modify these classes, or create new ones.
+
+Enhancements: Add and test a puzzle and any other enhancements.
+By this time, you have had the experience of implementing the baseline requirements and you can make a better estimate as to how much work your planned enhancements will be. Put this together with how many days you have left -- you may not quite be on your planned schedule -- and decide whether to revise your plans. Then go ahead and implement your enhancements. Add any specific commands that are required to complete the puzzle and verify that the gamer cannot get around the puzzle.
+What to Submit
+
+Hand in all code and files inside your adventure project directory as an "adventure.zip" file.
+This should include:
+adventure.py: which should contain your main program and all helper functions you have written; make sure all required import functions are included. It is a good idea to run your program one last time before submitting; sometimes students make a mistake during last-minute improvements and submit a program that doesn't run at all.
+all .py files your adventure.py imports classes from
+map.txt, locations.txt, items.txt
+any other files required to run your puzzles/enhancements
+solution.txt, gameover.txt, enhancements.txt (described below)
+Before you submit your project, place all of the files you are giving us in a new directory and try to run the game. If you receive unexpected errors, you're missing some of your required game files, and we won't be able to play the game.
+Important Step: Checking your solution.txt
+
+Once you have a "solution.txt" file with commands that the player should use to run your game, you may use the given run_solution.py file to test that this works as expected.
+
+You may use this to try out the first few commands for a partially complete game, but the final "solution.txt" file should result in text that displays your game played from beginning to end.
+
+As an example, here is what the output could be after calling run_solution.py on a very simple game that the player wins if they can buy a cup of coffee: sample output, using this sample solution.txt. Your output does not have to follow this exact format. It does however, have to show the game from start to end.
+
+To use this, make sure run_solution.py is in the same directory as your adventure.py and solution.txt files. Then run the run_solution file.
+
+REQUIRED TEXT FILES
+
+In order to help us mark your code, you must hand in the following files.
+Failure to do so means significant parts of your code may NOT get marked.
+solution.txt
+Try running run_solution.py to test this out, as described above.
+This should be a plain text file that has one command per line, from beginning of the game to victory.
+The commands in the file should be exactly as they need to be typed during gameplay.
+Careful about typos or extra characters.
+In this solution.txt file, you must include the command "INVENTORY" each time an item is picked up, and each time an item is dropped.
+You must also include the command "SCORE" after some point when the score is increased.
+
+gameover.txt
+This should be a plain text file that has one command per line, from beginning of the game to a game over state.
+The commands in the file should be exactly as they need to be typed during gameplay.
+Careful about typos or extra characters.
+
+enhancements.txt
+Hand this in ONLY if you added enhancements. Explicitly detail the puzzle(s) you have added to your game. Each puzzle should be described by one or two paragraphs of text, outlining what must be done to solve each puzzle. Describe any other minor enhancements within 200 words.
+
+Optional: You may hand in more .txt files showing any extra/special features added to the gameplay.
+These files should be named gameplay1.txt, gameplay2.txt, and so on.
+Like the solution and gameover text files, these files should ONLY contain gameplay commands (one command per line) and NOTHING ELSE.
+The commands should be from start of the game up until the end of the special feature.
+Describe the purpose of these files within the enhancements.txt file, like so:
+gameplay1.txt
+Shows gameplay that involves the player reaching bonus puzzle and winning a bonus item.
+Reminder: Again, before you submit your project, place all of the files you are giving us in a new directory and try to run the game. If you receive unexpected errors, you're missing some of your required game files, and we won't be able to play the game.
+
+Remember that spelling of filenames, including case, counts: your file must be named exactly as above.
+
+Important: Make sure that we can run your project simply by running the code in adventure.py.
+
+FAQ
+
+If you have any questions that have not been addressed here, please post on our discussion board.
+
+Q: Can I partner with anyone from the course?
+A: Yes.
+
+Q: Will both members receive the same mark?
+A: Yes. Please form a group on MarkUs, and hand in only ONE submission.
+
+Q: Is there a minimum/maximum number of locations?
+Not exactly.
+There is no maximum - whatever you think is doable, go ahead and do.
+As for minimum, remember that the minimum number of items is 3 (lucky pen, cheat sheet, t-card). The game requires a player to find all those items in time for an exam.
+Based on that, up to you to decide what the minimum number of locations should be. If you want to make a game so boring that all of the items can be found in one location, then you can make a game with one location (although it would be really hard to get all the four directional commands, and a score, and a max number of moves / lose condition applied to a game with just one location).
+
+Q: Can I change the backstory?
+Please stick to using the backstory that we have provided you with. The base objective (gathering objects in time for the exam), as well as the minimum three items (lucky pen, t-card, cheat sheet) are required in your game. To keep things consistent, keep your plotline based around the given story.
+This story just provides you with a start and end point of the game. What happens in between is all up to you - that means, you may end up magically teleporting your player to an alternate universe, or something similar. That's fine, as long as the plot still begins and ends with the plotline we have provided you with.
+
+Q: How should load_locations work?
+Depending on how you store all the data in locations.txt, it should be something like...
+def load_locations(self, filename):
+        '''
+        Algorithm:
+        open filename
+        while there are more locations:
+                id = readline # (you have to parse this)
+                brief_description = readline
+                long_description = readline # well not really, it could be many lines
+                find the end (line with just END)
+                create a new Location with id, brief_description, long_description, visited=False
+                add to self.locations with id as key and Location object as value
+
+        '''
+Q: Can I change the format of locations.txt?
+Yes. You may change the format of locations.txt and items.txt if required for your enhancements.
+
+Q: Are we allowed to add new methods into the classes?
+Yes, you are allowed to add new methods to all the classes.
+Q: Are we being marked on simple efficient code?
+Yep. See marking scheme
+
+Q: Can I store info about [...] in locations.txt?
+Yes. You may change the format of locations.txt and items.txt as required.
+
+Q: Do I have to give users a score based on location visited?
+Nope. As long as there is some sort of scoring system, and a "score" command which the player can use to see what their current score is, you're good.
+It doesn't have to be based on visiting locations.
+
+Q: Can I add new classes to game_data.py? Can I add a new .py file with new classes that I import into adventure.py?
+Yes, and yes. As Step 5 in the "Suggested Milestones" above says:
+
+Note: you should be able to complete the above milestones using the provided World, Player, Location and Item classes. For the next milestone, you may have to add to or modify these classes, or create new ones.
+Q: Are we allowed to have multiple failed states for the game aside from the one specified for us (too many moves)?
+Yep! For sure.
+Then your gameover.txt can show any one of these possible fail states. You don't have to show us all of them. Choose one.
+
+Make sure to hand in all required text files with your submission, and test out solution.txt as described above.

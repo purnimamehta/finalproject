@@ -1,17 +1,71 @@
 LOCATION 0
-You are on the first floor of the UTM Library. There is an empty study room to the South, an exit from the library to the North.
-You are on the first floor of the UTM Library. It's usually crowded at this time of the day, but today it's eerily quiet.
-Only a few students are studying inside one of the study rooms. You better not disturb them. A librarian stands near the
-service desk, looking bored and sleepy. There is an empty study room to the South, an exit from the library to the North.
+You are on the first floor of CCT.
 END
 
 LOCATION 1
-This study room is completely empty.
-You are in an empty study room. And by empty, we mean, absolutely empty. All the tables and chairs have been taken out,
-the whiteboards taken off the wall, not even the carpeting is left. Are they planning to do something else with this space?
+You are in the hallway connecting the library and CCT.
 END
 
 LOCATION 2
-You are outside of the library. There is a Starbucks to the North.
-You are outside of the library in a crowded hallway. There is a smell of coffee in the air. There is a Starbucks to the North.
+You are on the first floor of the library.
+END
+
+LOCATION 3
+You are outside in the nature
+END
+
+LOCATION 4
+You are in the IB Atrium.
+END
+
+LOCATION 5
+You are inside Second Cup.
+END
+
+LOCATION 6
+You are inside the IB Cafeteria.
+END
+
+LOCATION 7
+You are inside the IB Foyer on the first floor.
+END
+
+LOCATION 8
+You are on the second floor of IB.
+END
+
+LOCATION 9
+You are on the third floor of IB.
+END
+
+LOCATION 10
+You are outside the shuttle waiting area outside IB.
+END
+
+LOCATION 11
+You are outside IB near the soccer fields.
+END
+
+LOCATION 12
+You are by the tennis courts.
+END
+
+LOCATION 13
+You are inside DH on the first floor.
+END
+
+LOCATION 14
+You are inside DH on the second floor.
+END
+
+LOCATION 15
+You are inside DH on the third floor.
+END
+
+LOCATION 16
+You are on the second floor of the library
+END
+
+LOCATION 17
+You are on the third floor of the library.
 END
