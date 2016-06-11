@@ -1,5 +1,6 @@
 LOCATION 0
 You are on the first floor of CCT.
+You look around and there is no one around.
 END
 
 LOCATION 1
