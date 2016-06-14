@@ -7,10 +7,10 @@ class World:
     def __init__(self, mapfile, locfile, itemfile):
         """
         (World, str filename, str filename, str filename) -> None
-        
+
         Initialize a World using data from given filenames.
         """
-        
+
         self.map = []
         self.locations = {}
         self.items = {}
@@ -31,8 +31,11 @@ class World:
         in which map data is located.
         '''
 
-        pass
-    
+        map = open(filename,'r')
+        for line in map:
+            line=line.strip()
+            self.map.append(line.split())  
+
     def load_locations(self, filename):
         '''
         (World, str filename) -> None
@@ -40,7 +43,7 @@ class World:
         as a dictionary where integer location numbers are the keys,
         and Location objects are the values:
         {integer location number: Location object}.
-        
+
         The given 'filename' is a string that gives name of text file
         in which location data is located.
         '''
@@ -59,7 +62,7 @@ class World:
         with item name as the key, and an Item object as the value.
         Each item should also be added into self.locations as
         based on the item's starting location as given in text file.
-        
+
         The given 'filename' is a string that gives name of text file
         in which item data is located.
         '''
@@ -128,7 +131,7 @@ def get_actions(current_location):
     e.g. The returned list should look something like:
          ["go north", "go south", "take t-card"]
     '''
-    
+
     actions = []
 
     # TODO:
