@@ -1,25 +1,25 @@
 LOCATION -1
 -1
-You cannot go that way.
-You cannot go that way, it is closed off.
+brief description: You cannot go that way.
+long description: You cannot go that way, it is closed off.
 END
 
 LOCATION 0
 1
-You are on the first floor of CCT.
-You are on the first floor of CCT, the lights don't seem to be working and the black walls don't make it any easier for you to find your way. You use you hands and feet to feel the way around and find a chair in what is supposedly the middle of the hallway. What does this mean? If you can't find the switch, lets leave this building!
+brief description: You are on the first floor of CCT.
+long description: You are on the first floor of CCT, the lights don't seem to be working and the black walls don't make it any easier for you to find your way. You use you hands and feet to feel the way around and find a chair in what is supposedly the middle of the hallway. What does this mean? If you can't find the switch, lets leave this building!
 END
 
 LOCATION 1
 1
-You are in the hallway connecting the library and CCT.
-You can faintly see that this is the hallway connecting the library and CCT, the sun is shining so brightly, its almost blinding! Let's keep going.
+brief description: You are in the hallway connecting the library and CCT.
+long description: You can faintly see that this is the hallway connecting the library and CCT, the sun is shining so brightly, its almost blinding! Let's keep going.
 END
 
 LOCATION 2
 2
-You are on the first floor of the library.
-Whoa! It's so quiet here, looks like you're inside the first floor of the library! You can check out the floor upstairs, maybe you left something there? You can also continue forward and go outside into the garden. 
+brief description: You are on the first floor of the library.
+long description: Whoa! It's so quiet here, looks like you're inside the first floor of the library! You can check out the floor upstairs, maybe you left something there? You can also continue forward and go outside into the garden. 
 END
 
 LOCATION 3
