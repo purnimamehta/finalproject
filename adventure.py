@@ -34,7 +34,9 @@ class World:
         map = open(filename,'r')
         for line in map:
             line=line.strip()
-            self.map.append(line.split())  
+            self.map.append(line.split())
+        map.close()
+
 
     def load_locations(self, filename):
         '''
@@ -54,6 +56,45 @@ class World:
         #   e.g. new_location = Location(location id, short desc, long desc, ...)
         # Add this location to self.locations dict with key as integer
         # of location id and value as this new_location object
+
+        file = open(filename,'r')
+        new_locations={}
+        brief_description = " "
+        long_description = " "
+        points= 0
+        index_of_location= " "
+        key= " "
+
+        for line in file:
+
+            if "LOCATION" in line:
+                new_locations[line] = new_locations
+                index_of_location = line.split(" ")[0].strip("\n")
+                line = key
+
+
+            if "brief description:" in line:
+                new_locations[key]=line
+                brief_description = line.strip("brief description:")
+
+            if "long description:" in line:
+                new_locations[key]=line
+                long_description = line.strip("long description:").strip("\n")
+
+
+            #if "0" or "1" or "2" or "3" or "4" or "5" in line:
+            #ill do this after interface/actual moving and what not
+
+
+
+        self.locations = new_locations
+
+        file.close()
+
+
+
+
+
 
     def load_items(self, filename):
         '''
