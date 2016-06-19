@@ -23,11 +23,15 @@ class World:
         print ("You've got an important exam coming up this evening, and you've been studying for weeks. Last night was a particularly late night on campus. You had difficulty focusing, so rather than staying in one place, you studied in various places throughout the building as the night progressed. Unfortunately, when you woke up this morning, you were missing some important exam-related items. You cannot find your T-card, and you're pretty sure that you're not going to get into tonight's exam without it. Also, you seem to have misplaced your lucky exam pen -- even if they let you in, you can't possibly write with another pen! Finally, your instructor for the course is nicer than your CSC108 instructors in that they are allowing you one handwritten page of information in the exam. Last night, you painstakingly crammed as much material onto a single page as humanly possible, but that's missing, too! All of this stuff must be around the building somewhere! Can you find all of it before your exam starts tonight?")
         print ("")
         print ("")
+        print ("Note that you are limited to _____ moves to find the necessary objects and take the exam or you'll automatically lose.")
+        print ("")
+        print ("")
         commands = ["Go [Direction]","Look", "Inventory", "Score", "Quit"]
+
+        while win != True
         print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
         print ("")
         print ("")
-        print ("Note that you are limited to _____ moves to find the necessary objects and take the exam or you'll automatically lose.")
 
 
         choice = input("Please select a command: ")
@@ -67,7 +71,7 @@ class World:
         elif choice == "Drink Coffee":          #ENHANCEMENT used at 5
 
 
-        elif choice == "Quit":
+    else choice == "Quit":
             print ("thanks for playing")
             exit()
 
@@ -191,8 +195,7 @@ class World:
         # TODO:
         # 1. Get location id at given x, y coordinates in self.map list
         # 2. Return Location object associated with this location number in self.locations dictionary
-
-        pass
+        for
 
     def get_moves(self, x, y):
         '''

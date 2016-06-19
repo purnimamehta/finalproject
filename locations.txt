@@ -79,53 +79,53 @@ END
 LOCATION 12
 5
 brief description: You are by the tennis courts.
-long description: Can you play tennis? No? Then why are you on the tennis courts? Looks like the deers are going to come eat the court nets because you forgot to close the door! Maybe they wont come after you if you leave now? 
+long description: Can you play tennis? No? Then why are you on the tennis courts? Looks like the deers are going to come eat the court nets because you forgot to close the door! Maybe they wont come after you if you leave now? But wait, looks like that deer has your water bottle! You run over the grab it just as the deer turns around to eat some grass. WOOHOO! YOU'VE FOUND YOUR WATER BOTTLE!
 END
 
 LOCATION 13
 1
 brief description: You are inside DH on the first floor.
-long description:
+long description: You are inside the first floor of DH. Are those deers you see inside the computer labs? One of them is eating the aux cord, oh no! Let's get closer so you can stop them.
 END
 
 LOCATION 14
 1
-brief description: You are inside DH on the second floor.
-long description:
+brief description: You are outside the DH lab room on the second floor.
+long description: Looks like you made it just in time to the second floor of the DH Lab room. Now's your time to use the special key and unlock the door to stop the deers from eating your computer lab! To use your key say "Unlock door".
 END
 
 LOCATION 15
 5
-brief description: You are inside DH on the third floor.
-long description:
+brief description: You are on the third floor of DH.
+long description: The third floor of DH is about the same as the third floor of IB. They're both boring, feature extremely unappealing colors and worst of all, the professors are all here discussing how they're going to fail their students with these exams. Sigh. Just as you turn around to walk away, you notice your cheat sheet hiding behind the plants! WOOHOO! YOU'VE FOUND YOUR CHEAT SHEET!
 END
 
 LOCATION 16
 1
-brief description: You are on the second floor of the library
-long description:
+brief description: You are on the second floor of the library.
+long description: It's coming back to you, you remember going up these stairs to the second floor of the library last night. It doesn't look like there's anything here, maybe you also went up to the third floor?
 END
 
 LOCATION 17
 5
 brief description: You are on the third floor of the library.
-long description:
+long description: You're on the third floor of the library. You walk towards the stacks and recall reading 'The Circle' last night when you took a study break. Taking a closer look and WOOHOO! YOU'VE FOUND YOUR TCARD. It was stuck in the back of the book.
 END
 
 LOCATION 18
 5
-brief description: You are on the third floor of the library.
-long description:
+brief description: You are on the fourth floor of the DH.
+long description: Why did you come up to the fourth floor of DH? You've never even been here before. Just as you're about to leave you walk into the children's play area.....And whats that you see?! A little girl is about to totally obliterate your lucky sweater. How did that even get up there? You run over and WOOHOO! GRABBED YOUR LUCKY SWEATER JUST IN TIME! Now the exam has nothing on you!
 END
 
 LOCATION 19
 1
-brief description: You are on the third floor of the library.
-long description:
+brief description: You are on the fourth floor of the library.
+long description: The fourth floor reeks of smoke and peppermint. Wonder what happened in here. Let's go outside and get some fresh air before you go back down.
 END
 
 LOCATION 20
 5
-brief description: You are on the third floor of the library.
-long description:
+brief description: You are on the rooftop garden of the library.
+long description: You are on the rooftop of the Library and it looks like there's a lot of caterpillar's around here. Wait a minute, that's not a caterpillar! It's your favourite lucky pen! WOOHOO! YOU'VE FOUND YOUR LUCKY PEN!
 END
