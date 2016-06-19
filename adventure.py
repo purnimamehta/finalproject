@@ -10,6 +10,7 @@ class World:
 
         Initialize a World using data from given filenames.
         """
+        player_location = player(4,3)
 
         self.map = []
         self.locations = {}
@@ -20,15 +21,20 @@ class World:
         self.load_items(itemfile)
 
 
-        print ("You've got an important exam coming up this evening, and you've been studying for weeks. Last night was a particularly late night on campus. You had difficulty focusing, so rather than staying in one place, you studied in various places throughout the building as the night progressed. Unfortunately, when you woke up this morning, you were missing some important exam-related items. You cannot find your T-card, and you're pretty sure that you're not going to get into tonight's exam without it. Also, you seem to have misplaced your lucky exam pen -- even if they let you in, you can't possibly write with another pen! Finally, your instructor for the course is nicer than your CSC108 instructors in that they are allowing you one handwritten page of information in the exam. Last night, you painstakingly crammed as much material onto a single page as humanly possible, but that's missing, too! All of this stuff must be around the building somewhere! Can you find all of it before your exam starts tonight?")
+        game = open('game_intro.txt', 'r')
+        for line in intro:
+            print(line.strip('\n'))
         print ("")
         print ("")
-        print ("Note that you are limited to _____ moves to find the necessary objects and take the exam or you'll automatically lose.")
-        print ("")
-        print ("")
+        print ("Note that you are limited to 200 moves to find the necessary objects and take the exam or you'll automatically lose.")
         commands = ["Go [Direction]","Look", "Inventory", "Score", "Quit"]
 
+<<<<<<< Updated upstream
         while win != True:
+=======
+
+        while True:
+>>>>>>> Stashed changes
             print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
             print ("")
             print ("")
