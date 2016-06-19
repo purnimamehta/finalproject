@@ -96,15 +96,8 @@ class World:
             #if "0" or "1" or "2" or "3" or "4" or "5" in line:
             #ill do this after interface/actual moving and what not
 
-
-
         self.locations = new_locations
-
         file.close()
-
-
-
-
 
 
     def load_items(self, filename):
@@ -130,6 +123,10 @@ class World:
         #    and value as Item object
 
 
+        for line in file:
+            line.split(" ")[0].strip("\n")
+            items_list.append(line)
+            self.items[line]
 
         file = open(filename,'r')
         items_list=[]
@@ -141,13 +138,6 @@ class World:
             self.items[line] = self.items
             self.items[line]=items_list[i]
             i= i + 1
-
-
-
-
-        file.close()e
-
-
 
 
     def get_room(self, x, y):
