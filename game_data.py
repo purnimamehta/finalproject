@@ -2,8 +2,8 @@ class Location:
     '''Class to represent each location in game world.'''
 
     def __init__(self):
-        '''Creates a new location.          
-        
+        '''Creates a new location.
+
         Data that should be associated with each Location object:
         an integer location ID,
         a brief description,
@@ -15,7 +15,7 @@ class Location:
         Location class as you see fit.
         e.g. You may want to add special actions that could be available for
              some locations.
-             
+
         All locations in your game MUST be represented as an instance of this class.
         '''
 
@@ -23,19 +23,24 @@ class Location:
         # e.g. a list to store items available in location (store as Item objects)
         self.items = []
 
-    def get_brief_description (self):
+    def get_brief_description (self, locations_dict, location_id):
         '''
         (Location) -> str
         Return str brief description of location.'''
-        
-        pass
+        x=" "
 
-    def get_full_description (self):
+        for location_id in locations_dict:
+            x = locations_dict[locations_id].get_brief_decription
+        return x
+
+    def get_full_description (self, locations_dict, location_id):
         '''
         (Location) -> str
         Return str long description of location.'''
-        
-        pass
+        for location_id in locations_dict:
+            return location_dict[location_id]
+
+
 
     # TODO: Add other 'getter' methods as above for other location data as needed
 
@@ -68,7 +73,8 @@ class Item:
         (Item) -> int
         Return location (the integer id) of where item is first found.'''
 
-        pass
+        self.x = 4
+        self.y = 3
 
     def get_name(self):
         '''
@@ -112,8 +118,8 @@ class Player:
         (Player, int, int) -> None
         Given integers dx and dy, move player to new location (self.x + dx, self.y + dy)
         '''
-
-        pass
+        self.x += dx
+        self.y += dy
 
     def move_north(self):
         '''
@@ -142,8 +148,8 @@ class Player:
         '''
 
         # TODO: use self.move to move one east
-        
-        pass
+
+        self.move(1,0)
 
     def move_west(self):
         '''
@@ -153,10 +159,9 @@ class Player:
         in our nested list self.map.
         '''
 
-        # TODO: use self.move to move one west
+        self.move(-1,0)
 
-        pass
-
+        
     def add_item(self, item):
         '''
         (Player, str item name) -> None
@@ -182,5 +187,3 @@ class Player:
         '''
 
         pass
-    
-    

@@ -29,6 +29,7 @@ class World:
         print ("")
         print ("Note that you are limited to _____ moves to find the necessary objects and take the exam or you'll automatically lose.")
 
+
         choice = input("Please select a command: ")
         if choice == "Go North":
 
@@ -43,7 +44,7 @@ class World:
 
 
         elif choice == "Look":
-
+            print (location.get_brief_description())
 
         elif choice == "Inventory":
 
@@ -68,7 +69,7 @@ class World:
 
         elif choice == "Quit":
             print ("thanks for playing")
-            break:
+            exit()
 
 
     def load_map(self, filename):
