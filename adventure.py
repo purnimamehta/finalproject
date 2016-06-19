@@ -10,8 +10,6 @@ class World:
 
         Initialize a World using data from given filenames.
         """
-        player_location = player(4,3)
-
         self.map = []
         self.locations = {}
         self.items = {}
@@ -19,74 +17,6 @@ class World:
         self.load_map(mapfile)
         self.load_locations(locfile)
         self.load_items(itemfile)
-
-
-        game = open('game_intro.txt', 'r')
-        for line in intro:
-            print(line.strip('\n'))
-        print ("")
-        print ("")
-        print ("Note that you are limited to 200 moves to find the necessary objects and take the exam or you'll automatically lose.")
-        commands = ["Go [Direction]","Look", "Inventory", "Score", "Quit"]
-
-<<<<<<< Updated upstream
-        while win != True:
-=======
-
-        while True:
->>>>>>> Stashed changes
-            print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
-            print ("")
-            print ("")
-
-
-            choice = input("Please select a command: ")
-            if choice == "Go North":
-                PLAYER.move_north()
-                location = WORLD.get_location(PLAYER.x, PLAYER.y)
-
-            elif choice == "Go South":
-                PLAYER.move_south()
-                location = WORLD.get_location(PLAYER.x, PLAYER.y)
-
-            elif choice == "Go West":
-                PLAYER.move_west()
-                location = WORLD.get_location(PLAYER.x, PLAYER.y)
-
-            elif choice == "Go East":
-                PLAYER.move_east()
-                location = WORLD.get_location(PLAYER.x, PLAYER.y)
-
-            elif choice == "Look":
-                print (location.get_full_description())
-
-            elif choice == "Inventory":
-                print("Your inventory:")
-                for x in PLAYER.get_inventory:
-                    print(self.inventory)
-
-            elif choice == "Score":
-                print(PLAYER.score())
-
-            elif choice == "Examine Object":        #ENHANCEMENT used at LOCATION 3
-                print ("I herd there theres bonus items in DH")
-
-            elif choice == "Examine Cup":           #ENHANCEMENT used at LOCATION 6
-                print ("Wow the cup has a note in it which say t-card and library on it")
-
-            elif choice == "Examine Key":           #ENHANCEMENT used at LOCATION 8
-                print ("Wow a key you will be told when this item can be used")
-
-            elif choice == "Eat Donut":             #ENHANCEMENT used at 5
-                PLAYER.remove_item("Donut")
-
-            elif choice == "Drink Coffee":          #ENHANCEMENT used at 5
-                PLAYER.remove_item("Second Cup Coffee")
-
-            else choice == "Quit":
-                print ("thanks for playing")
-                exit()
-
 
     def load_map(self, filename):
         '''
@@ -203,7 +133,7 @@ class World:
         # TODO:
         # 1. Get location id at given x, y coordinates in self.map list
         # 2. Return Location object associated with this location number in self.locations dictionary
-        for
+
 
     def get_moves(self, x, y):
         '''
@@ -219,7 +149,7 @@ class World:
 # --- END of World class --- #
 
 
-# --- Functions to handle player's actions in the game ---
+# --- Functions to handle player's actions in the game --- #
 
 def view_inventory():
     '''
@@ -248,7 +178,7 @@ def get_actions(current_location):
          ["go north", "go south", "take t-card"]
     '''
 
-    actions = []
+    actions = ["Go [Direction]","Look", "Inventory", "Score", "Quit"]
 
     # TODO:
     # Use WORLD.get_moves to append all possible moves to actions.
@@ -257,52 +187,99 @@ def get_actions(current_location):
 
     return actions
 
-def do_action(choice, current_loc):
+def do_action(WORLD, PLAYER, choice, current_loc):
     '''
-    (str, Location) -> None
+    (object, object, str, Location) -> None
     This function takes str choice and Location current_loc and
     carries out consequences of making the given choice.
     You may update this docstring based on how you choose to code this function.
     '''
 
-    # TODO:
-    # Carry out consequences of making the given choice
-    # e.g.
-    if choice == "go north":
-        PLAYER.move_north()
-    # ... handle any other possible choices ...
+    if __name__ == "__main__":
+
+        WORLD = World("map.txt", "locations.txt", "items.txt")
+        PLAYER = Player(4, 3)
+
+        game = open('game_intro.txt', 'r')
+        for line in game:
+            print(line.strip('\n'))
+        print ("")
+        print ("Note that you are limited to 200 moves to find the necessary objects and take the exam or you'll automatically lose.")
+        commands = ["Go [Direction]","Look", "Inventory", "Score", "Quit"]
+        print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
+        print ("")
+        print ("")
+
+        while not PLAYER.victory:
+            current_loc = WORLD.get_room(PLAYER.x, PLAYER.y)
+
+            # TODO: ENTER CODE HERE TO PRINT LOCATION DESCRIPTION
+            # Depending on whether or not it's been visited before,
+            # print either full description (first time visit) or brief description (every subsequent visit)
+            print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
+            choice = input("\nPlease select a command: ")
 
 
-if __name__ == "__main__":
 
-    # Variables to store world info and player info
-    WORLD = World("map.txt", "locations.txt", "items.txt")
-    PLAYER = Player(0, 0) # set starting location of player; you may change the x, y coordinates here as appropriate
+            if choice == "Go North":
+                PLAYER.move_north()
+                location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-    menu = ["look", "inventory", "score", "quit"]
+            elif choice == "Go South":
+                PLAYER.move_south()
+                location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-    while not PLAYER.victory:
+            elif choice == "Go West":
+                PLAYER.move_west()
+                location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-        # Variable to keep track of player's current location
-        # Get current location based on player's x and y coordinates
-        current_loc = WORLD.get_room(PLAYER.x, PLAYER.y)
+            elif choice == "Go East":
+                PLAYER.move_east()
+                location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-        # TODO: ENTER CODE HERE TO PRINT LOCATION DESCRIPTION
-        # Depending on whether or not it's been visited before,
-        # print either full description (first time visit) or brief description (every subsequent visit)
+            elif choice == "Look":
+                print (location.get_full_description())
 
-        print("\nWhat to do? \n")
-        available_actions = get_actions(current_loc)
-        for action in available_actions:
-            print(action)
+            elif choice == "Inventory":
+                print("Your inventory:")
+                for x in PLAYER.get_inventory:
+                    print(self.inventory)
 
-        print("===")
-        print("Menu Options: \n")
-        for option in menu:
-            print(option)
+            elif choice == "Score":
 
-        choice = input("\nChoose action: ")
 
-        # Check that choice is valid in this situation
-        # If it is, call do_action(choice, current_loc),
-        # If not, print appropriate error message
+            #ENHANCEMENT used at LOCATION 3
+            elif choice == "Examine Object":
+                print ("I heard that there are bonus items in DH")
+
+            #ENHANCEMENT used at LOCATION 6
+            elif choice == "Examine Cup":
+                print ("Whoa! The RRRoll up the Rim gave us a clue! It says you will find your TCard in the library.")
+
+             #ENHANCEMENT used at LOCATION 8
+            elif choice == "Examine Key":
+                print ("Looks like it's a magical key. Let's keep it afe until we have to use it.")
+
+            #ENHANCEMENT used at 5
+            elif choice == "Eat Donut":
+                print("Yummy! Energy boosted!")
+                PLAYER.remove_item("Donut")
+
+            #ENHANCEMENT used at 5
+            elif choice == "Drink Coffee":
+                print("Careful! It's hot!")
+                PLAYER.remove_item("Second Cup Coffee")
+
+            else choice == "Quit":
+                print ("Thanks for playing")
+                exit()
+
+
+            available_actions = get_actions(current_loc)
+            for action in available_actions:
+                print(action)
+
+
+            # Check that choice is valid in this situation
+            # If it is, call do_action(choice, current_loc),
+            # If not, print appropriate error message

@@ -30,7 +30,7 @@ class Location:
 
     def get_location_id(self):
         '''
-        (Location) -> chr
+        (Location) -> int
         Return chr of location id.
         '''
         return self.location_id
@@ -65,7 +65,7 @@ class Location:
 
     def get_points(self):
         '''
-        (Location) -> chr
+        (Location) -> int
         Return chr points for visiting each location
         '''
         return self.points
@@ -141,7 +141,8 @@ class Player:
         self.victory = False # set to True once player has won game
         self.score = 0
         self.inventory = [] # store list of item names that are in player's inventory
-        self.tracker=0
+        self.tracker = 0
+        self.score = 0
 
     def move(self, dx, dy):
         '''
@@ -158,7 +159,6 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
-        tracker=+1
         self.move(0,-1)
 
 
@@ -169,7 +169,6 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
-        tracker=+1
         self.move(0,1)
 
 
@@ -180,7 +179,6 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
-        tracker=+1
         self.move(1,0)
 
 
@@ -191,7 +189,6 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
-        tracker=+1
         self.move(-1,0)
 
 
@@ -222,9 +219,33 @@ class Player:
         '''
         return self.inventory
 
-     def score(self):
+
+    def get_score(self):
         '''
         (int) -> int
-        Returns total points
+        Returns the score after visiting locations or finding items.
         '''
         return self.score
+
+
+    def add_points(self, point):
+        '''
+        Adds and Returns the score after new points have been added.
+        '''
+        self.score = self.score + point
+
+
+    def get_tracker(self):
+        '''
+        (int) -> int
+        Tracks and returns the amount of moves player has attempted.
+        '''
+        return self.tracker
+
+
+    def counter(self):
+        '''
+        (int) -> int
+        Adds to tracker to know how many moves have been made in total.
+        '''
+        self.tracker = self.tracker + 1
