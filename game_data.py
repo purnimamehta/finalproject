@@ -23,6 +23,7 @@ class Location:
         # e.g. a list to store items available in location (store as Item objects)
         self.items = []
 
+
     def get_brief_description (self):
         '''
         (Location) -> str
@@ -42,7 +43,7 @@ class Location:
 class Item:
     '''Class to represent each item in game world.'''
 
-    def __init__ (self, name, start, target, target_points):
+    def __init__ (self, name, start, target, target_points, ):
         '''Create item referred to by string name, with integer "start"
         being the integer identifying the item's starting location,
         the integer "target" being the item's target location, and
@@ -68,28 +69,28 @@ class Item:
         (Item) -> int
         Return location (the integer id) of where item is first found.'''
 
-        pass
+        return self.start
+
 
     def get_name(self):
         '''
         (Item) -> str
         Return the str name of the item.'''
 
-        pass
-
+        return self.name
     def get_target_location (self):
         '''
         (Item) -> int
         Return item's target location (the integer id) of where it should be deposited.'''
 
-        pass
+        return self.target
 
     def get_target_points (self):
         '''
         (Item) -> int
         Return integer points awarded for depositing the item in its target location.'''
 
-        pass
+        return self.target_points
 
 class Player:
     '''Class to represent the player in game world.'''

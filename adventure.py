@@ -10,7 +10,7 @@ class World:
 
         Initialize a World using data from given filenames.
         """
-
+        
         self.map = []
         self.locations = {}
         self.items = {}
@@ -48,7 +48,7 @@ class World:
 
 
         elif choice == "Look":
-            print (location.get_brief_description())
+            print (location.get_full_description())
 
         elif choice == "Inventory":
 
@@ -129,6 +129,7 @@ class World:
                 index_of_location = line.split(" ")[0].strip("\n")
                 line = key
 
+
             if "brief description:" in line:
                 new_locations[key]=line
                 brief_description = line.strip("brief description:")
@@ -167,9 +168,12 @@ class World:
         # 2. Store item in self.items dict with key as str item name
         #    and value as Item object
 
+
+
+
         file = open(filename,'r')
-        items_list = []
-        i = 0
+        items_list=[]
+        i=0
 
         for line in file:
             line.split(" ")[0].strip("\n")
@@ -177,6 +181,7 @@ class World:
             self.items[line] = self.items
             self.items[line]=items_list[i]
             i= i + 1
+
 
 
     def get_room(self, x, y):
