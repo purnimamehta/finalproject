@@ -1,7 +1,7 @@
 class Location:
     '''Class to represent each location in game world.'''
 
-    def __init__(self):
+    def __init__(self, location_id, brief_description, long_description, items, location_visited):
         '''Creates a new location.
 
         Data that should be associated with each Location object:
@@ -21,31 +21,46 @@ class Location:
 
         # TODO: Add new attributes for this class here to store location data.
         # e.g. a list to store items available in location (store as Item objects)
-        self.items = []
+        self.location_id = location_id
+        self.items = [items]
+        self.brief_description = brief_description
+        self.long_description = long_description
+        self.location_visited = location_visited
 
-<<<<<<< HEAD
+    def get_location_id(self):
+        '''
+        (Location) -> chr
+        Return chr of location id.
+        '''
+        return self.location_id
 
-    def get_brief_description (self):
-=======
-    def get_brief_description (self, locations_dict, location_id):
->>>>>>> origin/master
+    def get_items(self):
+        '''
+        (Items) -> lst
+        Return a list of items that are available at each location
+        '''
+        return self.items
+
+    def get_brief_description(self):
         '''
         (Location) -> str
-        Return str brief description of location.'''
-        x = ""
-        for location_id in locations_dict:
-            x = locations_dict[locations_id].get_brief_decription
-        return x
+        Return str brief description of location.
+        '''
+        return self.brief_description
 
-    def get_full_description (self, locations_dict, location_id):
+    def get_full_description(self):
         '''
         (Location) -> str
         Return str long description of location.
         '''
-        for location_id in locations_dict:
-            return location_dict[location_id]
+        return self.long_description
 
-    # TODO: Add other 'getter' methods as above for other location data as needed
+    def get_location_visited(self):
+        '''
+        (Location) -> chr
+        Return chr long description of location.
+        '''
+        return self.location_visited
 
 class Item:
     '''Class to represent each item in game world.'''
@@ -74,30 +89,34 @@ class Item:
     def get_starting_location (self):
         '''
         (Item) -> int
-        Return location (the integer id) of where item is first found.'''
-
+        Return location (the integer id) of where item is first found.
+        '''
         return self.start
 
 
     def get_name(self):
         '''
         (Item) -> str
-        Return the str name of the item.'''
-
+        Return the str name of the item.
+        '''
         return self.name
+
+
     def get_target_location (self):
         '''
         (Item) -> int
-        Return item's target location (the integer id) of where it should be deposited.'''
-
+        Return item's target location (the integer id) of where it should be deposited.
+        '''
         return self.target
+
 
     def get_target_points (self):
         '''
         (Item) -> int
-        Return integer points awarded for depositing the item in its target location.'''
-
+        Return integer points awarded for depositing the item in its target location.
+        '''
         return self.target_points
+
 
 class Player:
     '''Class to represent the player in game world.'''
