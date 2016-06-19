@@ -67,19 +67,19 @@ END
 LOCATION 10
 1
 brief description: You are outside the shuttle waiting area outside IB.
-long description:
+long description: You just missed the shuttle bus! Oh well, it's not like you went to UTSG during the night anyway so missing the bus shouldn't be a big deal.
 END
 
 LOCATION 11
 1
-brief description: You are outside IB near the soccer fields.
-long description:
+brief description: You are on the soccer fields.
+long description: Now's not the time to play soccer! Get off the soccer fields before you step in some goose poo and ruin your brand new shoes. You look around and see some geese heading your way, coming to bite your head off!
 END
 
 LOCATION 12
 5
 brief description: You are by the tennis courts.
-long description:
+long description: Can you play tennis? No? Then why are you on the tennis courts? Looks like the deers are going to come eat the court nets because you forgot to close the door! Maybe they wont come after you if you leave now? 
 END
 
 LOCATION 13
