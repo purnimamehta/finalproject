@@ -58,7 +58,8 @@ one to get a feel for how it works. You can play one called Adventure online her
 Objective
 
 Your adventure game will allow players to try to find all of the required items prior to the exam starting.
-If the player finds all of the items and brings them to the exam room before the exam starts, they "win" the game. (See "Winning the game" below for more details)
+If the player finds all of the items and brings them to the exam room before the exam starts,
+they "win" the game. (See "Winning the game" below for more details)
 
 Getting Started
 
@@ -69,13 +70,20 @@ Baseline Requirements
 At a minimum, you are required to implement the following functionality:
 
 DOCSTRINGS
-You must write docstrings for all of your functions. You are welcome and encouraged to write as many helper functions as you like in order to eliminate duplicate code and make your program easier to read.
+You must write docstrings for all of your functions. You are welcome and encouraged to write
+as many helper functions as you like in order to eliminate duplicate code and make your program easier to read.
 Adhere to the Python Style Guidelines when writing these docstrings and formatting your code.
 
 LOCATION DESCRIPTIONS
-Each location in the game has an associated description. Keep in mind that a location does not necessarily have to be a "room" -- it could be a courtyard, a portion of a street surrounding the building, etc.
+Each location in the game has an associated description. Keep in mind that a location
+does not necessarily have to be a "room" -- it could be a courtyard, a portion of
+a street surrounding the building, etc.
 Print either a full or brief description upon each visit.
-Each time a player enters a location, they must be given a description of the location (a longer description if this is the first time the player is visiting it, a brief description otherwise). Text adventures generally display the full description of a room only once, when the room is entered the first time. Subsequent visits to the room yield only a brief description that alerts the gamer to where they are, without repeating scenery and other descriptive information.
+Each time a player enters a location, they must be given a description of the location
+(a longer description if this is the first time the player is visiting it, a brief description otherwise).
+Text adventures generally display the full description of a room only once, when the room is entered t
+he first time. Subsequent visits to the room yield only a brief description that alerts the gamer to
+where they are, without repeating scenery and other descriptive information.
 
 Each location must have a number associated with it.
 Both the full and the brief description MUST contain the location number associated with that location as a header, e.g.:
@@ -93,7 +101,8 @@ The "look" command prints out the full description of the current location.
 
 Each location must be stored as an instance of the Location class provided in the starter code.
 ITEMS
-Some of the locations have items within them. These items can be taken by the gamer and carried to another location, where they can then be deposited.
+Some of the locations have items within them. These items can be taken by the gamer and carried
+to another location, where they can then be deposited.
 Required Command: "Inventory"
 This command gives a list of what the gamer is currently carrying.
 
@@ -132,7 +141,8 @@ This map must be stored in self.map in the World class as detailed in the starte
 A note about (x,y) positions: The x-y coordinate plane here is represented with (0,0) as the top left corner. From there, x increases to the right, and y increases to the bottom. So, for the map above, location 4 is considered to be at position (1,2).
 
 LOCATIONS AND ITEMS FILES
-The format of the location and item data files is up to you and partially depends on the additional enhancements that you decide to implement.
+The format of the location and item data files is up to you and partially depends on
+the additional enhancements that you decide to implement.
 As an example for item data, we might store items in "items.txt" using a one line per item format, such as:
 
 1 10 5 Cheat Sheet
@@ -152,13 +162,23 @@ You are on the first floor of the UTM Library. It's usually crowded at this time
 END
 
 WINNING THE GAME / LIMITED NUMBER OF MOVES
-As mentioned, the gamer wins the game if they are able to bring all exam-related items to the exam room before the exam starts. In your game, you should settle on the number of moves that the gamer is allowed to make prior to the exam starting. If they exhaust their allotted number of moves, then the exam starts and the gamer does not win.
-You are not required to physically time the gamer. They can take as long as they like to play the game. What matters is the number of moves they make, not the actual wallclock time that elapses while they play. (Is look or inventory a "move"? That's for you to decide!)
+As mentioned, the gamer wins the game if they are able to bring all exam-related items to the exam room before the exam starts.
+In your game, you should settle on the number of moves that the gamer is allowed to make prior to the exam starting.
+If they exhaust their allotted number of moves, then the exam starts and the gamer does not win.
+You are not required to physically time the gamer.
+They can take as long as they like to play the game.
+What matters is the number of moves they make, not the actual wallclock time that elapses while they play.
+(Is look or inventory a "move"? That's for you to decide!)
 
 SCORE
-The game should keep track of the user's score. The scoring algorithm should include giving points for picking up and depositing the required exam items, as well as performing other applicable actions in the game as you see fit.
+The game should keep track of the user's score. The scoring algorithm should include giving points
+for picking up and depositing the required exam items, as well as performing other applicable
+actions in the game as you see fit.
 Required Command: "Score"
-This command gives the gamer's current score. The scoring algorithm should include giving points for picking up and depositing the required exam items, as well as performing other applicable actions in the game as you see fit.
+This command gives the gamer's current score.
+The scoring algorithm should include giving points for
+picking up and depositing the required exam items,
+as well as performing other applicable actions in the game as you see fit.
 QUIT
 Another required command is "Quit", allowing the player to quit the game at any time.
 Minimum Requirements Checklist
@@ -189,10 +209,20 @@ Player loses the game if max. number of moves reached
 Required text files are complete (see What to Submit below for details)
 Enhancements: Adding Puzzles and Features
 
-To include enhancements in your project (worth 15% of the final grade), your game must have at least one fully implemented puzzle.
-The functionality we have described so far -- moving around, taking and dropping items -- is one important facet of traditional adventure games. The other is the presence of puzzles that must be solved. Without puzzles, the game can be won simply by running around and picking up everything.
+To include enhancements in your project (worth 15% of the final grade),
+your game must have at least one fully implemented puzzle.
+The functionality we have described so far -- moving around, taking and dropping items --
+is one important facet of traditional adventure games. The other is the presence of
+puzzles that must be solved. Without puzzles, the game can be won simply by running
+around and picking up everything.
 
-For a good description of the reasoning behind puzzles, and common types of puzzles, see this page all about puzzles. Some puzzles are rather elaborate, relying on performing specialized verbs on multiple items or imposing specific timing requirements. Your puzzles can be simple -- finding a key in a remote location from the door that it opens -- or more complex. Regardless, implementing puzzles will require that you extend the commands you support and/or extend the information you store in your data files.
+For a good description of the reasoning behind puzzles,
+and common types of puzzles, see this page all about puzzles.
+Some puzzles are rather elaborate, relying on performing specialized verbs 
+on multiple items or imposing specific timing requirements.
+Your puzzles can be simple -- finding a key in a remote location from the door
+that it opens -- or more complex. Regardless, implementing puzzles
+will require that you extend the commands you support and/or extend the information you store in your data files.
 
 If you wish to further increase the complexity of your game, in addition to this puzzle, you could implement any additional features you like (just keep it G-rated :P).
 

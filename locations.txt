@@ -17,68 +17,115 @@ long description: You can faintly see that this is the hallway connecting the li
 END
 
 LOCATION 2
-2
+1
 brief description: You are on the first floor of the library.
-long description: Whoa! It's so quiet here, looks like you're inside the first floor of the library! You can check out the floor upstairs, maybe you left something there? You can also continue forward and go outside into the garden. 
+long description: Whoa! It's so quiet here, looks like you're inside the first floor of the library! You can check out the floor upstairs, maybe you left something there? You can also continue forward and go outside into the garden.
 END
 
 LOCATION 3
-
-You are outside in the nature.
+1
+brief description: buzz, buzz! You are outside the library, a bee almost stung you - be careful!
+long description: You are outside the library, its a beautiful day - but not to write an exam! Wait, whats that? You see something shiny on the ground and walk over to check it out. Try typing "Examine object" to get a closer look.
 END
 
 LOCATION 4
-You are in the IB Atrium.
+1
+brief description: You are in the IB Atrium.
+long description: You feel grand as you walk inside the IB Atrium, someone could get married in here - haha! The walls are painted bright yellow with pink polka dots.
 END
 
 LOCATION 5
-You are inside Second Cup.
+1
+brief description: You are inside Second Cup.
+long description: Seeing Second Cup makes you thirsty, good thing they're open this early! Let's get a drink. Try saying "Eat donut" or "Drink coffee" so you have some energy for the exams. Or you can come back later when you're ready to be energized for the exam.
 END
 
 LOCATION 6
-You are inside the IB Cafeteria.
+1
+brief description: You are inside the IB Cafeteria.
+long description: The IB Cafeteria is so small, jeez there's practically no where to sit. Practically enough you see a Tim Horton'a RRRoll up the Rim cup in the corner. Let's "Examine Cup" to see if theres anything useful here.
 END
 
 LOCATION 7
-You are inside the IB Foyer on the first floor.
+1
+brief description: You are inside the IB Foyer on the first floor.
+long description: Inside the IB Foyer, you see lots of students still studying for the exam and getting that last minute for information in. There's a clock slowly ticking in corner and drowning out everything you memorized so far. Move before it sucks everything out of you.
 END
 
 LOCATION 8
-You are on the second floor of IB.
+1
+brief description: You are on the second floor of IB.
+long description: You're walking up the stairs to the second floor of IB. BUMP! *TWIST* *ROLL* *TUMBLE* Whoa! What was that? You almost slipped on the stairs, and see there's a glittery key on the ground. Try "Examine Key" to see what the fuss is about.
 END
 
 LOCATION 9
-You are on the third floor of IB.
+1
+brief description: You are on the third floor of IB.
+long description: The third floor of IB is boring, ugly and just making you zone out. Why are there so many plants in here anyway? HEY! Is that a Venux fly trap? Looks like its trying to take something from your inventory. Let's get out of here!
 END
 
 LOCATION 10
-You are outside the shuttle waiting area outside IB.
+1
+brief description: You are outside the shuttle waiting area outside IB.
+long description:
 END
 
 LOCATION 11
-You are outside IB near the soccer fields.
+1
+brief description: You are outside IB near the soccer fields.
+long description:
 END
 
 LOCATION 12
-You are by the tennis courts.
+5
+brief description: You are by the tennis courts.
+long description:
 END
 
 LOCATION 13
-You are inside DH on the first floor.
+1
+brief description: You are inside DH on the first floor.
+long description:
 END
 
 LOCATION 14
-You are inside DH on the second floor.
+1
+brief description: You are inside DH on the second floor.
+long description:
 END
 
 LOCATION 15
-You are inside DH on the third floor.
+5
+brief description: You are inside DH on the third floor.
+long description:
 END
 
 LOCATION 16
-You are on the second floor of the library
+1
+brief description: You are on the second floor of the library
+long description:
 END
 
 LOCATION 17
-You are on the third floor of the library.
+5
+brief description: You are on the third floor of the library.
+long description:
+END
+
+LOCATION 18
+5
+brief description: You are on the third floor of the library.
+long description:
+END
+
+LOCATION 19
+1
+brief description: You are on the third floor of the library.
+long description:
+END
+
+LOCATION 20
+5
+brief description: You are on the third floor of the library.
+long description:
 END

@@ -1,4 +1,9 @@
-Lucky pen
-T-card
-Lucky sweater
-Cheat sheet
+17 9 10 TCard
+20 9 15 Lucky Exam Pen
+15 9 10 Cheat Sheet
+12 9 10 Water Bottle
+18 9 20 Lucky Sweater
+3 3 2 Shiny paper
+6 6 0 Tim Horton's Cup
+5 5 2 Second Cup Coffee
+8 8 5 Magic Key
