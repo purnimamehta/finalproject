@@ -179,7 +179,7 @@ class World:
             line.split(" ")[0].strip("\n")
             items_list.append(line)
             self.items[line] = self.items
-            self.items[line]=items_list[i]
+            self.items[line] = items_list[i]
             i= i + 1
 
 

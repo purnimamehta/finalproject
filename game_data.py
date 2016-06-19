@@ -23,20 +23,27 @@ class Location:
         # e.g. a list to store items available in location (store as Item objects)
         self.items = []
 
+<<<<<<< HEAD
 
     def get_brief_description (self):
+=======
+    def get_brief_description (self, locations_dict, location_id):
+>>>>>>> origin/master
         '''
         (Location) -> str
         Return str brief description of location.'''
+        x = ""
+        for location_id in locations_dict:
+            x = locations_dict[locations_id].get_brief_decription
+        return x
 
-        pass
-
-    def get_full_description (self):
+    def get_full_description (self, locations_dict, location_id):
         '''
         (Location) -> str
-        Return str long description of location.'''
-
-        pass
+        Return str long description of location.
+        '''
+        for location_id in locations_dict:
+            return location_dict[location_id]
 
     # TODO: Add other 'getter' methods as above for other location data as needed
 
@@ -165,6 +172,7 @@ class Player:
             self.inventory.append(item)
         return self.inventory
 
+
     def remove_item(self, item):
         '''
         (Player, str item name) -> None
@@ -173,6 +181,7 @@ class Player:
         if item in self.inventory:
             self.inventory.remove(item)
         return self.inventory
+
 
     def get_inventory(self):
         '''
