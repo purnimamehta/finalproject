@@ -19,6 +19,17 @@ class World:
         self.load_locations(locfile)
         self.load_items(itemfile)
 
+
+        print ("hi welcome to our game")
+        print ("go north")
+        print ("go west")
+        print ("go south")
+        print ("go east")
+        print ("inventory")
+        print ("look")
+
+
+
     def load_map(self, filename):
         '''
         (World, str filename) -> None
@@ -120,14 +131,8 @@ class World:
 
 
 
-        for line in file:
-            line.split(" ")[0].strip("\n")
-            items_list.append(line)
-            self.items[line]
-
         file = open(filename,'r')
         items_list=[]
-        items_dict={}
         i=0
 
         for line in file:
@@ -140,7 +145,7 @@ class World:
 
 
 
-        file.close()
+        file.close()e
 
 
 
