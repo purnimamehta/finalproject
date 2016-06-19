@@ -118,12 +118,29 @@ class World:
         # 2. Store item in self.items dict with key as str item name
         #    and value as Item object
 
-        file = open(filename,'r')
-        items_list=[]
+
 
         for line in file:
             line.split(" ")[0].strip("\n")
             items_list.append(line)
+            self.items[line]
+
+        file = open(filename,'r')
+        items_list=[]
+        items_dict={}
+        i=0
+
+        for line in file:
+            line.split(" ")[0].strip("\n")
+            items_list.append(line)
+            self.items[line] = self.items
+            self.items[line]=items_list[i]
+            i= i + 1
+
+
+
+
+        file.close()
 
 
 
