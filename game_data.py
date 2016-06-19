@@ -141,6 +141,7 @@ class Player:
         self.victory = False # set to True once player has won game
         self.score = 0
         self.inventory = [] # store list of item names that are in player's inventory
+        self.tracker=0
 
     def move(self, dx, dy):
         '''
@@ -157,6 +158,7 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
+        tracker=+1
         self.move(0,-1)
 
 
@@ -167,6 +169,7 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
+        tracker=+1
         self.move(0,1)
 
 
@@ -177,6 +180,7 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
+        tracker=+1
         self.move(1,0)
 
 
@@ -187,6 +191,7 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
+        tracker=+1
         self.move(-1,0)
 
 
@@ -216,3 +221,10 @@ class Player:
         Return player's inventory.
         '''
         return self.inventory
+
+     def score(self):
+        '''
+        (int) -> int
+        Returns total points
+        '''
+        return self.score

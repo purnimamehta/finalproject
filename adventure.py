@@ -66,7 +66,7 @@ class World:
                     print(self.inventory)
 
             elif choice == "Score":
-                
+                print(PLAYER.score())
 
             elif choice == "Examine Object":        #ENHANCEMENT used at LOCATION 3
                 print ("I herd there theres bonus items in DH")
@@ -151,8 +151,10 @@ class World:
                 long_description = line.strip("long description:").strip("\n")
 
 
-            #if "0" or "1" or "2" or "3" or "4" or "5" in line:
-            #ill do this after interface/actual moving and what not
+            if "1" or "2" or "3" or "4" or "5" in line:
+                new_locations[key] = line
+
+
 
         self.locations = new_locations
         file.close()
