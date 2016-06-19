@@ -161,7 +161,7 @@ class Player:
 
         self.move(-1,0)
 
-        
+
     def add_item(self, item):
         '''
         (Player, str item name) -> None
@@ -170,7 +170,9 @@ class Player:
         :return:
         '''
 
-        pass
+         if item not in self.inventory:
+            self.inventory.append(item)
+        return True
 
     def remove_item(self, item):
         '''
@@ -178,7 +180,9 @@ class Player:
         Remove given item name from player's inventory.
         '''
 
-        pass
+         if item in self.inventory:
+            self.inventory.remove(item)
+        return True
 
     def get_inventory(self):
         '''
@@ -186,4 +190,4 @@ class Player:
         Return player's inventory.
         '''
 
-        pass
+        return self.inventory
