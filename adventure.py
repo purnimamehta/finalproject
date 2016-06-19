@@ -10,7 +10,7 @@ class World:
 
         Initialize a World using data from given filenames.
         """
-        
+
         self.map = []
         self.locations = {}
         self.items = {}
@@ -36,16 +36,20 @@ class World:
 
         choice = input("Please select a command: ")
         if choice == "Go North":
-
+            PLAYER.move_north()
+            location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
         elif choice == "Go South":
-
+            PLAYER.move_south()
+            location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
         elif choice == "Go West":
-
+            PLAYER.move_west()
+            location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
         elif choice == "Go East":
-
+            PLAYER.move_east()
+            location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
         elif choice == "Look":
             print (location.get_full_description())
@@ -167,10 +171,6 @@ class World:
         #    i.e. (add Item to self.locations[starting_location_id].items)
         # 2. Store item in self.items dict with key as str item name
         #    and value as Item object
-
-
-
-
         file = open(filename,'r')
         items_list=[]
         i=0
