@@ -27,13 +27,13 @@ class World:
         print ("")
         print ("")
         commands = ["Go [Direction]","Look", "Inventory", "Score", "Quit"]
+        print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
+        print ("")
+        print ("")
 
+        win = False
         while win != True:
             print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
-            print ("")
-            print ("")
-
-
             choice = input("Please select a command: ")
             if choice == "Go North":
                 PLAYER.move_north()

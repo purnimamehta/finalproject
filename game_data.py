@@ -1,7 +1,7 @@
 class Location:
     '''Class to represent each location in game world.'''
 
-    def __init__(self, location_id, brief_description, long_description, items, location_visited):
+    def __init__(self, location_id, brief_description, long_description, items, location_visited, points):
         '''Creates a new location.
 
         Data that should be associated with each Location object:
@@ -22,10 +22,11 @@ class Location:
         # TODO: Add new attributes for this class here to store location data.
         # e.g. a list to store items available in location (store as Item objects)
         self.location_id = location_id
-        self.items = [items]
+        self.items = []
         self.brief_description = brief_description
         self.long_description = long_description
         self.location_visited = location_visited
+        self.points = points
 
     def get_location_id(self):
         '''
@@ -57,10 +58,17 @@ class Location:
 
     def get_location_visited(self):
         '''
-        (Location) -> chr
-        Return chr long description of location.
+        (Location) -> str
+        Return str long description of location.
         '''
         return self.location_visited
+
+    def get_points(self):
+        '''
+        (Location) -> chr
+        Return chr points for visiting each location
+        '''
+        return self.points
 
 class Item:
     '''Class to represent each item in game world.'''

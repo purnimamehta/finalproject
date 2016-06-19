@@ -6,4 +6,5 @@
 3 3 2 Shiny paper
 6 6 0 Tim Horton's Cup
 5 5 2 Second Cup Coffee
+5 5 2 Donut
 8 8 5 Magic Key
