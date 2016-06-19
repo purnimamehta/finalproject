@@ -27,13 +27,13 @@ class World:
         print ("")
         print ("")
         commands = ["Go [Direction]","Look", "Inventory", "Score", "Quit"]
-        print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
-        print ("")
-        print ("")
 
-        win = False
         while win != True:
             print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
+            print ("")
+            print ("")
+
+
             choice = input("Please select a command: ")
             if choice == "Go North":
                 PLAYER.move_north()
@@ -55,25 +55,27 @@ class World:
                 print (location.get_full_description())
 
             elif choice == "Inventory":
+                print("Your inventory:")
+                for x in PLAYER.get_inventory:
+                    print(self.inventory)
 
-
-            #elif choice == "Score":
-
+            elif choice == "Score":
+                
 
             elif choice == "Examine Object":        #ENHANCEMENT used at LOCATION 3
-
+                print ("I herd there theres bonus items in DH")
 
             elif choice == "Examine Cup":           #ENHANCEMENT used at LOCATION 6
-
+                print ("Wow the cup has a note in it which say t-card and library on it")
 
             elif choice == "Examine Key":           #ENHANCEMENT used at LOCATION 8
-
+                print ("Wow a key you will be told when this item can be used")
 
             elif choice == "Eat Donut":             #ENHANCEMENT used at 5
-
+                PLAYER.remove_item("Donut")
 
             elif choice == "Drink Coffee":          #ENHANCEMENT used at 5
-
+                PLAYER.remove_item("Second Cup Coffee")
 
             else choice == "Quit":
                 print ("thanks for playing")
