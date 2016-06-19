@@ -27,6 +27,38 @@ class World:
         print ("go east")
         print ("inventory")
         print ("look")
+        print ("check score")
+        print ("quit")
+        chioce = input("please select a command ")
+
+
+        if chioce == "go north":
+
+
+        elif chioce == "go south":
+
+
+        elif chioce == "go west":
+
+
+        elif chioce == "go east":
+
+
+        elif chioce == "inventory":
+
+
+        elif chioce == "look":
+
+
+        elif chioce == "check score":
+
+
+        elif chioce == "quit":
+            print ("thanks for playing")
+            break:
+
+
+
 
 
 
