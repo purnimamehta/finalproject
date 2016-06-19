@@ -23,24 +23,19 @@ class Location:
         # e.g. a list to store items available in location (store as Item objects)
         self.items = []
 
-    def get_brief_description (self, locations_dict, location_id):
+    def get_brief_description (self):
         '''
         (Location) -> str
         Return str brief description of location.'''
-        x=" "
 
-        for location_id in locations_dict:
-            x = locations_dict[locations_id].get_brief_decription
-        return x
+        pass
 
-    def get_full_description (self, locations_dict, location_id):
+    def get_full_description (self):
         '''
         (Location) -> str
         Return str long description of location.'''
-        for location_id in locations_dict:
-            return location_dict[location_id]
 
-
+        pass
 
     # TODO: Add other 'getter' methods as above for other location data as needed
 
@@ -73,8 +68,7 @@ class Item:
         (Item) -> int
         Return location (the integer id) of where item is first found.'''
 
-        self.x = 4
-        self.y = 3
+        pass
 
     def get_name(self):
         '''
@@ -118,8 +112,8 @@ class Player:
         (Player, int, int) -> None
         Given integers dx and dy, move player to new location (self.x + dx, self.y + dy)
         '''
-        self.x += dx
-        self.y += dy
+        self.x = self.x + dx
+        self.y = self.y + dy
 
     def move_north(self):
         '''
@@ -130,6 +124,7 @@ class Player:
         '''
         self.move(0,-1)
 
+
     def move_south(self):
         '''
         (Player) -> None
@@ -139,6 +134,7 @@ class Player:
         '''
         self.move(0,1)
 
+
     def move_east(self):
         '''
         (Player) -> None
@@ -146,10 +142,8 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
-
-        # TODO: use self.move to move one east
-
         self.move(1,0)
+
 
     def move_west(self):
         '''
@@ -158,7 +152,6 @@ class Player:
         These integer directions are based on how the map must be stored
         in our nested list self.map.
         '''
-
         self.move(-1,0)
 
 
@@ -166,28 +159,23 @@ class Player:
         '''
         (Player, str item name) -> None
         Add given item name to player's inventory.
-        :param item:
-        :return:
         '''
-
-         if item not in self.inventory:
+        if item not in self.inventory:
             self.inventory.append(item)
-        return True
+        return self.inventory
 
     def remove_item(self, item):
         '''
         (Player, str item name) -> None
         Remove given item name from player's inventory.
         '''
-
-         if item in self.inventory:
+        if item in self.inventory:
             self.inventory.remove(item)
-        return True
+        return self.inventory
 
     def get_inventory(self):
         '''
         (Player) -> lst
         Return player's inventory.
         '''
-
         return self.inventory

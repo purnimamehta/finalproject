@@ -129,7 +129,6 @@ class World:
                 index_of_location = line.split(" ")[0].strip("\n")
                 line = key
 
-
             if "brief description:" in line:
                 new_locations[key]=line
                 brief_description = line.strip("brief description:")
@@ -168,15 +167,9 @@ class World:
         # 2. Store item in self.items dict with key as str item name
         #    and value as Item object
 
-
-        for line in file:
-            line.split(" ")[0].strip("\n")
-            items_list.append(line)
-            self.items[line]
-
         file = open(filename,'r')
-        items_list=[]
-        i=0
+        items_list = []
+        i = 0
 
         for line in file:
             line.split(" ")[0].strip("\n")
