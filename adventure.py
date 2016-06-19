@@ -28,56 +28,56 @@ class World:
         print ("")
         commands = ["Go [Direction]","Look", "Inventory", "Score", "Quit"]
 
-        while win != True
-        print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
-        print ("")
-        print ("")
+        while win != True:
+            print ("The following commands are available to you at any time: ", commands, " and other special commands are accessible when you go to certain locations.")
+            print ("")
+            print ("")
 
 
-        choice = input("Please select a command: ")
-        if choice == "Go North":
-            PLAYER.move_north()
-            location = WORLD.get_location(PLAYER.x, PLAYER.y)
+            choice = input("Please select a command: ")
+            if choice == "Go North":
+                PLAYER.move_north()
+                location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-        elif choice == "Go South":
-            PLAYER.move_south()
-            location = WORLD.get_location(PLAYER.x, PLAYER.y)
+            elif choice == "Go South":
+                PLAYER.move_south()
+                location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-        elif choice == "Go West":
-            PLAYER.move_west()
-            location = WORLD.get_location(PLAYER.x, PLAYER.y)
+            elif choice == "Go West":
+                PLAYER.move_west()
+                location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-        elif choice == "Go East":
-            PLAYER.move_east()
-            location = WORLD.get_location(PLAYER.x, PLAYER.y)
+            elif choice == "Go East":
+                PLAYER.move_east()
+                location = WORLD.get_location(PLAYER.x, PLAYER.y)
 
-        elif choice == "Look":
-            print (location.get_full_description())
+            elif choice == "Look":
+                print (location.get_full_description())
 
-        elif choice == "Inventory":
-
-
-        elif choice == "Score":
+            elif choice == "Inventory":
 
 
-        elif choice == "Examine Object":        #ENHANCEMENT used at LOCATION 3
+            #elif choice == "Score":
 
 
-        elif choice == "Examine Cup":           #ENHANCEMENT used at LOCATION 6
+            elif choice == "Examine Object":        #ENHANCEMENT used at LOCATION 3
 
 
-        elif choice == "Examine Key":           #ENHANCEMENT used at LOCATION 8
+            elif choice == "Examine Cup":           #ENHANCEMENT used at LOCATION 6
 
 
-        elif choice == "Eat Donut":             #ENHANCEMENT used at 5
+            elif choice == "Examine Key":           #ENHANCEMENT used at LOCATION 8
 
 
-        elif choice == "Drink Coffee":          #ENHANCEMENT used at 5
+            elif choice == "Eat Donut":             #ENHANCEMENT used at 5
 
 
-    else choice == "Quit":
-            print ("thanks for playing")
-            exit()
+            elif choice == "Drink Coffee":          #ENHANCEMENT used at 5
+
+
+            else choice == "Quit":
+                print ("thanks for playing")
+                exit()
 
 
     def load_map(self, filename):
