@@ -195,7 +195,8 @@ while not PLAYER.victory:
     if choice == "Go North":
         PLAYER.move_north()
         location = WORLD.get_moves(PLAYER.x, PLAYER.y)
-        if location == -1
+        if location == -1:
+            print (location.get_full_description())
             PLAYER.move_south()
         else:
             PLAYER.counter()
