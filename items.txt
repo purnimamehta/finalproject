@@ -4,7 +4,7 @@
 12 9 10 Water Bottle
 18 9 20 Lucky Sweater
 3 3 2 Shiny paper
-6 6 0 Tim Horton's Cup
+6 6 2 Tim Horton's Cup
 5 5 2 Second Cup Coffee
 5 5 2 Donut
 8 8 5 Magic Key

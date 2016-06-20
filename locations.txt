@@ -26,6 +26,7 @@ LOCATION 3
 1
 brief description: buzz, buzz! You are outside the library, a bee almost stung you - be careful!
 long description: You are outside the library, its a beautiful day - but not to write an exam! Wait, whats that? You see something shiny on the ground and walk over to check it out. Try typing "Examine object" to get a closer look.
+Item: Shiny Paper
 END
 
 LOCATION 4
@@ -38,12 +39,14 @@ LOCATION 5
 1
 brief description: You are inside Second Cup.
 long description: Seeing Second Cup makes you thirsty, good thing they're open this early! Let's get a drink. Try saying "Eat donut" or "Drink coffee" so you have some energy for the exams. Or you can come back later when you're ready to be energized for the exam.
+Item: Second Cup Coffee, Donut
 END
 
 LOCATION 6
 1
 brief description: You are inside the IB Cafeteria.
 long description: The IB Cafeteria is so small, jeez there's practically no where to sit. Practically enough you see a Tim Horton'a RRRoll up the Rim cup in the corner. Let's "Examine Cup" to see if theres anything useful here.
+Item: Tim Horton's Cup
 END
 
 LOCATION 7
@@ -56,12 +59,13 @@ LOCATION 8
 1
 brief description: You are on the second floor of IB.
 long description: You're walking up the stairs to the second floor of IB. BUMP! *TWIST* *ROLL* *TUMBLE* Whoa! What was that? You almost slipped on the stairs, and see there's a glittery key on the ground. Try "Examine Key" to see what the fuss is about.
+Item: Magic Key
 END
 
 LOCATION 9
 1
 brief description: You are on the third floor of IB.
-long description: The third floor of IB is boring, ugly and just making you zone out. Why are there so many plants in here anyway? HEY! Is that a Venux fly trap? Looks like its trying to take something from your inventory. Let's get out of here!
+long description: The third floor of IB is boring, ugly and just making you zone out. Why are there so many plants in here anyway? HEY! Is that a Venus fly trap? Looks like its trying to take something from your inventory. Let's get out of here!
 END
 
 LOCATION 10
@@ -80,6 +84,7 @@ LOCATION 12
 5
 brief description: You are by the tennis courts.
 long description: Can you play tennis? No? Then why are you on the tennis courts? Looks like the deers are going to come eat the court nets because you forgot to close the door! Maybe they wont come after you if you leave now? But wait, looks like that deer has your water bottle! You run over the grab it just as the deer turns around to eat some grass. WOOHOO! YOU'VE FOUND YOUR WATER BOTTLE!
+Item: Water Bottle
 END
 
 LOCATION 13
@@ -98,6 +103,7 @@ LOCATION 15
 5
 brief description: You are on the third floor of DH.
 long description: The third floor of DH is about the same as the third floor of IB. They're both boring, feature extremely unappealing colors and worst of all, the professors are all here discussing how they're going to fail their students with these exams. Sigh. Just as you turn around to walk away, you notice your cheat sheet hiding behind the plants! WOOHOO! YOU'VE FOUND YOUR CHEAT SHEET!
+Item: Cheat Sheet
 END
 
 LOCATION 16
@@ -110,12 +116,14 @@ LOCATION 17
 5
 brief description: You are on the third floor of the library.
 long description: You're on the third floor of the library. You walk towards the stacks and recall reading 'The Circle' last night when you took a study break. Taking a closer look and WOOHOO! YOU'VE FOUND YOUR TCARD. It was stuck in the back of the book.
+Item: TCard
 END
 
 LOCATION 18
 5
 brief description: You are on the fourth floor of the DH.
 long description: Why did you come up to the fourth floor of DH? You've never even been here before. Just as you're about to leave you walk into the children's play area.....And whats that you see?! A little girl is about to totally obliterate your lucky sweater. How did that even get up there? You run over and WOOHOO! GRABBED YOUR LUCKY SWEATER JUST IN TIME! Now the exam has nothing on you!
+Item: Lucky Sweater
 END
 
 LOCATION 19
@@ -128,4 +136,5 @@ LOCATION 20
 5
 brief description: You are on the rooftop garden of the library.
 long description: You are on the rooftop of the Library and it looks like there's a lot of caterpillar's around here. Wait a minute, that's not a caterpillar! It's your favourite lucky pen! WOOHOO! YOU'VE FOUND YOUR LUCKY PEN!
+Item: Lucky Exam Pen
 END
