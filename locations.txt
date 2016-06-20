@@ -5,19 +5,19 @@ long description: You cannot go that way, it is closed off.
 END
 
 LOCATION 0
-1
+0
 brief description: You are on the first floor of CCT.
 long description: You are on the first floor of CCT, the lights don't seem to be working and the black walls don't make it any easier for you to find your way. You use you hands and feet to feel the way around and find a chair in what is supposedly the middle of the hallway. What does this mean? If you can't find the switch, lets leave this building!
 END
 
 LOCATION 1
-1
+0
 brief description: You are in the hallway connecting the library and CCT.
 long description: You can faintly see that this is the hallway connecting the library and CCT, the sun is shining so brightly, its almost blinding! Let's keep going.
 END
 
 LOCATION 2
-1
+0
 brief description: You are on the first floor of the library.
 long description: Whoa! It's so quiet here, looks like you're inside the first floor of the library! You can check out the floor upstairs, maybe you left something there? You can also continue forward and go outside into the garden.
 END
@@ -30,13 +30,13 @@ Item: Shiny Paper
 END
 
 LOCATION 4
-1
+0
 brief description: You are in the IB Atrium.
 long description: You feel grand as you walk inside the IB Atrium, someone could get married in here - haha! The walls are painted bright yellow with pink polka dots.
 END
 
 LOCATION 5
-1
+2
 brief description: You are inside Second Cup.
 long description: Seeing Second Cup makes you thirsty, good thing they're open this early! Let's get a drink. Try saying "Eat donut" or "Drink coffee" so you have some energy for the exams. Or you can come back later when you're ready to be energized for the exam.
 Item: Second Cup Coffee, Donut
@@ -50,7 +50,7 @@ Item: Tim Horton's Cup
 END
 
 LOCATION 7
-1
+0
 brief description: You are inside the IB Foyer on the first floor.
 long description: Inside the IB Foyer, you see lots of students still studying for the exam and getting that last minute for information in. There's a clock slowly ticking in corner and drowning out everything you memorized so far. Move before it sucks everything out of you.
 END
@@ -63,38 +63,38 @@ Item: Magic Key
 END
 
 LOCATION 9
-1
+0
 brief description: You are on the third floor of IB.
 long description: The third floor of IB is boring, ugly and just making you zone out. Why are there so many plants in here anyway? HEY! Is that a Venus fly trap? Looks like its trying to take something from your inventory. Let's get out of here!
 END
 
 LOCATION 10
-1
+0
 brief description: You are outside the shuttle waiting area outside IB.
 long description: You just missed the shuttle bus! Oh well, it's not like you went to UTSG during the night anyway so missing the bus shouldn't be a big deal.
 END
 
 LOCATION 11
-1
+0
 brief description: You are on the soccer fields.
 long description: Now's not the time to play soccer! Get off the soccer fields before you step in some goose poo and ruin your brand new shoes. You look around and see some geese heading your way, coming to bite your head off!
 END
 
 LOCATION 12
-5
+2
 brief description: You are by the tennis courts.
 long description: Can you play tennis? No? Then why are you on the tennis courts? Looks like the deers are going to come eat the court nets because you forgot to close the door! Maybe they wont come after you if you leave now? But wait, looks like that deer has your water bottle! You run over the grab it just as the deer turns around to eat some grass. WOOHOO! YOU'VE FOUND YOUR WATER BOTTLE!
 Item: Water Bottle
 END
 
 LOCATION 13
-1
+0
 brief description: You are inside DH on the first floor.
 long description: You are inside the first floor of DH. Are those deers you see inside the computer labs? One of them is eating the aux cord, oh no! Let's get closer so you can stop them.
 END
 
 LOCATION 14
-1
+0
 brief description: You are outside the DH lab room on the second floor.
 long description: Looks like you made it just in time to the second floor of the DH Lab room. Now's your time to use the special key and unlock the door to stop the deers from eating your computer lab! To use your key say "Unlock door".
 END
@@ -107,7 +107,7 @@ Item: Cheat Sheet
 END
 
 LOCATION 16
-1
+0
 brief description: You are on the second floor of the library.
 long description: It's coming back to you, you remember going up these stairs to the second floor of the library last night. It doesn't look like there's anything here, maybe you also went up to the third floor?
 END
@@ -120,14 +120,14 @@ Item: TCard
 END
 
 LOCATION 18
-5
+15
 brief description: You are on the fourth floor of the DH.
 long description: Why did you come up to the fourth floor of DH? You've never even been here before. Just as you're about to leave you walk into the children's play area.....And whats that you see?! A little girl is about to totally obliterate your lucky sweater. How did that even get up there? You run over and WOOHOO! GRABBED YOUR LUCKY SWEATER JUST IN TIME! Now the exam has nothing on you!
 Item: Lucky Sweater
 END
 
 LOCATION 19
-1
+0
 brief description: You are on the fourth floor of the library.
 long description: The fourth floor reeks of smoke and peppermint. Wonder what happened in here. Let's go outside and get some fresh air before you go back down.
 END
