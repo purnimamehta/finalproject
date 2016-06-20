@@ -150,30 +150,11 @@ class World:
             if len(self.map[x]) > y and y >=0:
                 location = self.map[x][y]
                 return self.locations[location]
-        return
 
 # --- END of World class --- #
 
 
 # --- Functions to handle player's actions in the game --- #
-
-def view_inventory():
-    '''
-    Suggested helper function.
-    You may use or remove this as you see fit.
-    TODO: Update this docstring based on how you use this method.
-    '''
-
-    pass
-
-def use_item(current_item, current_location):
-    '''
-    Suggested helper function.
-    You may use or remove this as you see fit.
-    TODO: Update this docstring based on how you use this method.
-    '''
-
-    pass
 
 
 def do_action(WORLD, PLAYER, choice, current_loc):
@@ -214,18 +195,37 @@ while not PLAYER.victory:
     if choice == "Go North":
         PLAYER.move_north()
         location = WORLD.get_moves(PLAYER.x, PLAYER.y)
+        if location == -1
+            PLAYER.move_south()
+        else:
+            PLAYER.counter()
 
     elif choice == "Go South":
         PLAYER.move_south()
         location = WORLD.get_moves(PLAYER.x, PLAYER.y)
+        if location == -1:
+            print (location.get_full_description())
+            PLAYER.move_North()
+        else:
+            PLAYER.counter()
 
     elif choice == "Go West":
         PLAYER.move_west()
         location = WORLD.get_moves(PLAYER.x, PLAYER.y)
+        if location == -1:
+            print (location.get_full_description())
+            PLAYER.move_East()
+        else:
+            PLAYER.counter()
 
     elif choice == "Go East":
         PLAYER.move_east()
         location = WORLD.get_moves(PLAYER.x, PLAYER.y)
+        if location == -1:
+            print (location.get_full_description())
+            PLAYER.move_West()
+        else:
+            PLAYER.counter()
 
     elif choice == "Look":
         print (location.get_full_description())
@@ -259,6 +259,9 @@ while not PLAYER.victory:
     elif choice == "Drink Coffee":
         print("Careful! It's hot!")
         PLAYER.remove_item("Second Cup Coffee \n")
+
+    elif choice == "Unlock Door" and key in self.inventory:
+        print("You've successfully unlocked the door and gotten the deers to go to the roof and eat grass instead. Haha!")
 
     elif choice == "Quit":
         print ("Thanks for playing \n")

@@ -230,7 +230,7 @@ class Player:
 
     def add_points(self, point):
         '''
-        Adds and Returns the score after new points have been added.
+        Adds and Returns number of points to total_points
         '''
         self.score = self.score + point
 
