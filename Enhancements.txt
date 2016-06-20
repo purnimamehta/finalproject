@@ -1,0 +1,16 @@
+Enhancements
+
+1. Examine Object
+Allows the player the player to examine items they find, revealing hidden messages leading to bonus items, or too the end  of the game.
+
+2. Examine Cup
+Allows the player to examine item they find, revealing hidden messages to bonus items or to the end of the game.
+
+3. Examine key 
+Allows the player to examine a key which unlocks a second floor lab in DH where you find deers eating a computer lab.
+
+4.Eat Donut
+ Allows the player to use one of the items they picked up and giving them nutrition to bring them closer to the end of the game.
+
+5.Drink Coffee
+Allows the player to drink Coffee to stay awake for the exam and brings them closer to the end of the game.
