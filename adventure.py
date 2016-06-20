@@ -84,6 +84,8 @@ class World:
             if "1" or "2" or "3" or "4" or "5" in line:
                 new_locations[key] = line
 
+            if "Item" in line:
+                new_locations[key] = line    
 
 
         self.locations = new_locations
@@ -143,8 +145,11 @@ class World:
         Return list of possible moves based on map data and boundaries.
         e.g. The returned list should look something like: ["go north", "go south"]
         '''
-
-        pass
+        if len(self.map) > x and x >= 0:
+            if len(self.map[x]) > y and y >=0:
+                location = self.map[x][y]
+                return self.locations[location]
+        return
 
 # --- END of World class --- #
 
